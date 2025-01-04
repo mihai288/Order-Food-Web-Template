@@ -1,0 +1,130 @@
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: flex-start;
+            position: fixed;
+            width: 270px; /* Adjust width for mobile devices */
+            height: 100vh;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            overflow-y: auto;
+            background-color: white;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        header::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+
+        .margin-page {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 25px;
+            text-align: center;
+        }
+
+        .margin-page a {
+            margin: 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            border: 3px solid black;
+            padding: 20px;
+            text-align: center;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+        .page-content {
+            margin-left: 270px; /* Adjust content margin for header width */
+            padding: 10px;
+        }
+
+        .food-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px; /* Max width for items */
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .food-box img {
+            width: 100%;
+            height: auto;
+            max-width: 225px;
+            border-radius: 15px;
+        }
+
+        .add-btn {
+            background-color: white;
+            color: black;
+            border: 3px solid black;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+
+        .add-btn:active {
+            background-color: black;
+            color: white;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            header {
+                width: 200px; /* Reduce header width on tablets */
+            }
+            .margin-page a {
+                margin: 10px;
+                font-size: 16px;
+                padding: 15px;
+            }
+            .page-content {
+                margin-left: 200px; /* Adjust content margin for smaller header */
+            }
+            .food-box {
+                width: 90%; /* More items in a row */
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                width: 100%; /* Full width header on small screens */
+                height: auto;
+                position: relative;
+            }
+            .page-content {
+                margin-left: 0; /* Remove margin for small screens */
+                padding-top: 20px;
+            }
+            .food-box {
+                width: 100%; /* Full-width food boxes on small screens */
+                margin: 10px 0;
+            }
+            .margin-page a {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
